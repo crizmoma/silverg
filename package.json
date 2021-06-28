@@ -1,0 +1,33 @@
+{
+  "name": "apirest",
+  "version": "1.0.0",
+  "description": "\"# silver-guide\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crizmoma/silverguide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crizmoma/silverguide/issues"
+  },
+  "homepage": "https://github.com/crizmoma/silverguide#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chart.js": "^3.3.2",
+    "ejs": "^3.1.6",
+    "expess": "^0.0.1-security",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
