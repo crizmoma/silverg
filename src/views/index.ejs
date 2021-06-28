@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Agro Tecnology</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color: pink">
+    <nav class="navbar navbar-light" style="background-color: 	#7FFFD4;">
+        <div class="container-fluid">
+            <a href="/" class="navbar-brand">Proyecto</a>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <br>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/add" method="POST">
+                            <div class="form-grup">
+                                <label for="disabledTextInput" class="form-label">Humedad s</label>
+                                <input type="text" name="Suelo" class="form-control">
+                            </div>
+                            <div class="form-grup">
+                                <label for="disabledTextInput" class="form-label">Temperatura</label>
+                                <input type="text" name="Temperatura" class="form-control">
+                            </div>
+
+                            <div class="form-grup">
+                                <label for="disabledTextInput" class="form-label">Humedad</label>
+                                <input type="text" name="Humedad" class="form-control">
+                            </div>
+                            <div class="form-grup">
+                                <label for="disabledTextInput" class="form-label">Fecha del registro</label>
+                                <input type="date" name="Fecha" placeholder="fecha" class="form-control">
+                            </div>
+                            <button class="btn btn-primary">Registro  </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Suelo</th>
+                            <th>Temperatura</th>
+                            <th>Humedad</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i = 0; i < val.length; i++){  %>
+                            <tr>
+                                <td>
+                                    <%= i+1  %>
+                                </td>
+                                <td>
+                                    <%= val[i].Suelo  %>
+                                </td>
+                                <td>
+                                    <%= val[i].Temperatura  %>
+                                </td>
+                                <td>
+                                    <%= val[i].Humedad  %>
+                                </td>
+                                <td>
+                                    <%= val[i].Fecha  %>
+                                </td>
+                            </tr>
+                            <% } %>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
